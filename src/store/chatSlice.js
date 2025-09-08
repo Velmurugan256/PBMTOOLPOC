@@ -16,7 +16,8 @@ export const submitQuery = createAsyncThunk(
 
       // --- LIVE API CALL ---
       // The request goes to our local proxy, which forwards it to the real API.
-      const response = await axios.post("/api/rag", requestPayload)
+
+      const response = await axios.post("https://b7l2hzxwbg.execute-api.us-east-1.amazonaws.com/api/rag", requestPayload)
 
       // The API returns data in the format { "answer": "..." },
       // which is exactly what our component expects.
